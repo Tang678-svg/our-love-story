@@ -1,6 +1,6 @@
 function getJSOrganization() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('name') || "Love";
+    return urlParams.get('name') || "亲爱的";
 }
 
 const JSOrganization = getJSOrganization();

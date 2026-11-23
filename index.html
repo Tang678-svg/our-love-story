@@ -1,59 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be Mine? 💖</title>
+    <title>你愿意和我一直走下去吗？💖</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div id="proposal-1" class="proposal-screen">
-            <div id="Sowrov1" class="sticker"></div>
-            <h1>Hey <span id="JSOrganization-placeholder"></span>! 💖</h1>
-            <p>I love you more than anything. Will you be mine forever?</p>
-            <div class="btn">
-                <a href="#" onclick="showProposal('proposal-yes')">💖 Yes</a>
-                <a href="#" onclick="showProposal('proposal-2')">💔 No</a>
+        <div id="proposal-1" class="proposal-screen proposal-intro">
+            <div class="intro-layout">
+                <div class="intro-photo">
+                    <img src="images/love-letter.jpg" width="1080" height="1440" alt="木桌上的三花猫玩偶和画着爱心的手写信封">
+                </div>
+                <div class="intro-copy">
+                    <div id="Sowrov1" class="sticker"></div>
+                    <h1><span id="JSOrganization-placeholder"></span>，<span class="intro-message">我有话想对你说 💖</span></h1>
+                    <p>我好喜欢和你在一起，也想和你一起过往后的每一天。你愿意吗？</p>
+                    <div class="btn">
+                        <a href="#" onclick="showProposal('proposal-yes')">💖 我愿意</a>
+                        <a href="#" onclick="showProposal('proposal-2')">💔 再想想</a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div id="proposal-2" class="proposal-screen">
             <div id="Sowrov2" class="sticker"></div>
-            <h1>Are you sure? 🥺</h1>
-            <p>You mean everything to me. Please say yes!</p>
+            <h1>再听我说一句，好吗？🥺</h1>
+            <p>每次有开心的事，我第一个就想告诉你。因为你笑起来，我会比刚才更开心。</p>
             <div class="btn">
-                <a href="#" onclick="showProposal('proposal-yes')">🥰 Yes</a>
-                <a href="#" onclick="showProposal('proposal-3')">😢 No</a>
+                <a href="#" onclick="showProposal('proposal-yes')">🥰 我愿意</a>
+                <a href="#" onclick="showProposal('proposal-3')">😢 再想想</a>
             </div>
         </div>
 
         <div id="proposal-3" class="proposal-screen">
             <div id="Sowrov3" class="sticker"></div>
-            <h1>My heart is breaking... 💔</h1>
-            <p>I can't imagine my life without you. Please give us a chance!</p>
+            <h1>心里有点酸酸的……💔</h1>
+            <p>我舍不得每次见面都要说再见。好想有一天，散完步就能牵着你的手回家。</p>
             <div class="btn">
-                <a href="#" onclick="showProposal('proposal-yes')">😍 Yes</a>
-                <a href="#" onclick="showProposal('proposal-4')">😭 No</a>
+                <a href="#" onclick="showProposal('proposal-yes')">😍 我愿意</a>
+                <a href="#" onclick="showProposal('proposal-4')">😭 再想想</a>
             </div>
         </div>
 
         <div id="proposal-4" class="proposal-screen">
             <div id="Sowrov4" class="sticker"></div>
-            <h1>Don't leave me... 😭</h1>
-            <p>You're my everything. Please say yes and make me the happiest person!</p>
+            <h1>还有一句悄悄话……😭</h1>
+            <p>以后想和你一起记住的日子，还有好多好多。你愿意和我慢慢走下去吗？</p>
             <div class="btn">
-                <a href="#" onclick="showProposal('proposal-yes')">❤️ Yes</a>
-                <a href="#" id="move-random">💔 No</a>
+                <a href="#" onclick="showProposal('proposal-yes')">❤️ 我愿意</a>
+                <a href="#" id="move-random">💔 再想想</a>
             </div>
         </div>
 
         <div id="proposal-yes" class="proposal-screen">
             <div id="Sowrov5" class="sticker"></div>
-            <h1>You said YES! 🥰</h1>
-            <p>I love you, <span id="JSOrganization-placeholder-5"></span>. Let's make forever amazing! 💞</p>
+            <h1>你说愿意啦！🥰</h1>
+            <p><span id="JSOrganization-placeholder-5"></span>，我爱你。从今天起，我们还有好多次日落可以一起看。💞</p>
         </div>
     </div>
 

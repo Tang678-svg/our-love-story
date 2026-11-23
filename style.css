@@ -14,11 +14,12 @@
 body {
     width: 100%;
     min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .container {
     display: flex;
@@ -26,7 +27,7 @@ body {
     text-align: center;
     align-items: center;
     gap: 20px;
-    max-width: 500px;
+    max-width: calc(100% - 40px);
     margin: 20px;
     position: relative;
 }
@@ -71,7 +72,88 @@ p {
 }
 .proposal-screen {
     display: none;
+    max-width: 500px;
     animation: fadeIn 0.5s ease;
+}
+.proposal-intro {
+    width: min(400px, calc(100vw - 40px));
+    max-width: none;
+}
+.intro-layout {
+    display: grid;
+    align-items: center;
+    gap: clamp(16px, 3.5vw, 36px);
+    padding: clamp(14px, 4vw, 34px);
+    background: #fff8f6;
+    border: 1px solid #fff;
+    border-radius: 26px;
+    box-shadow: 0 16px 44px rgb(122 35 60 / 12%);
+}
+.intro-photo {
+    width: min(100%, 280px);
+    margin-inline: auto;
+    padding: 7px;
+    background: #fff;
+    border-radius: 17px;
+    box-shadow: 0 8px 20px rgb(88 55 42 / 14%);
+}
+.intro-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center 90%;
+    border-radius: 11px;
+}
+.intro-copy {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.intro-copy .sticker {
+    width: 88px;
+    height: 88px;
+}
+.intro-copy .sticker:empty {
+    display: none;
+}
+.intro-copy h1 {
+    margin: 6px 0 10px;
+    font-size: clamp(1.45rem, 4.8vw, 2.1rem);
+    line-height: 1.35;
+    text-wrap: balance;
+}
+.intro-message {
+    display: inline-block;
+    max-width: 100%;
+}
+.intro-copy p {
+    max-width: 20em;
+    margin: 0 auto 18px;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+.intro-copy .btn {
+    gap: 12px;
+}
+.intro-copy .btn a {
+    padding: 10px 19px;
+    white-space: nowrap;
+}
+@media (min-width: 680px) {
+    .proposal-intro {
+        width: min(840px, calc(100vw - 40px));
+    }
+    .intro-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+    .intro-photo {
+        width: min(100%, 340px);
+    }
+    .intro-copy .sticker {
+        width: 116px;
+        height: 116px;
+    }
 }
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
